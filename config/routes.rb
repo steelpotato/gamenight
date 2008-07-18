@@ -1,9 +1,29 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :categories
-
-
-  map.root :controller => "home"
-  map.resources :games
+  
+  map.search 'games/search', :controller => "games", :action => "search"
+  
+  map.resources :categories do |category|
+    category.resources :games
+  end  
+  
+  map.resources :games, :has_many => :comments do |game|
+    game.resources :categories
+  end
+  
+  # Worry about this later... there's a whole chapter
+  map.login 'user/login', :controller => "session", :action => "new"
+  map.logout 'user/logout', :controller => "session", :action => "destroy"
+  
+  
+  # This needs to work on a whole user object!
+  # map.new_user 'user/new', :controller => 
+  
+  # map.resource :session, :controller => :session
+  
+  
+  
+  # I WANT :: All the games in a particular category
+  # I WANT :: That to be filtered in another magical way ... 
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -37,7 +57,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
+  map.root :controller => "home"
 
   # See how all your routes lay out with "rake routes"
 

@@ -2,7 +2,8 @@
 
 <% form_for(@category) do |f| %>
   <%= f.error_messages %>
-
+  <% @f = f %>
+  <%= render :partial => 'form' %>
   <p>
     <%= f.submit "Create" %>
   </p>

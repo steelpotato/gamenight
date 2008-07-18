@@ -1,9 +1,35 @@
 class Game < ActiveRecord::Base
   validates_length_of :title, :within => 1..50, :message => "must be present"
   # validates_presence_of :description, :message => "can't be blank"
+  has_and_belongs_to_many :categories
+  has_many :comments
   
+  # This just works!  That is so freaking cool I can't stand it
   def to_param 
-    short_title
+    id.to_s + "_" + title.gsub(/\s/, '_').gsub(/[^-\w]/,'').downcase
+  end
+  
+  def self.filter(params)  
+         
+    includes = [];
+    conditions = [];
+    variables = {};
+    
+    if params.has_key? :category
+      includes << :categories
+      conditions << "categories_games.category_id = :category";     
+      variables[:category] = params[:category]    
+    end                    
+    
+    if params.has_key? :players and params[:players].to_i > 0
+      conditions << "min_players <= :players"
+      conditions << "max_players >= :players"
+      variables[:players] = params[:players]    
+    end                 
+    
+    finalconditions = conditions.any? ? [conditions.join(' and '), variables] : nil; 
+    
+    return Game.find(:all, :conditions => finalconditions, :include => includes)
   end
   
 end

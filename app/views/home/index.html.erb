@@ -1,1 +1,18 @@
-welcome to game night
+<div class='lefthome'> 
+    <div class='gamebox banner' href='<%= games_path(:category => 1) %>'>
+        <div class='label'>Table Games</div>
+        <div class='text'>Board games, card games, dice games -- These are traditional games that are fun to play around a table.  The rules and nuances of the game are what make it good. The challenge is usually mental</div>
+    </div>   
+    <div class='gamebox banner' href='<%= games_path(:category => 2) %>'>
+        <div class='label'>Party Games</div>
+        <div class='text'>Having some friends over? These games are appropriate for groups of various sizes, and are fun because of the people and the interaction between them. The challenge is usually mental and social</div>
+    </div>
+    <div class='gamebox banner' href='<%= games_path(:category => 3) %>'>
+        <div class='label'>Active Games</div>
+        <div class='text'>These games are usually played outside, and present physical and social challenges</div>
+    </div>
+</div>
+<div class='righthome'>
+    <div><a href='<%= login_path %>'>Login or Signup</a></div>
+    <div><a href='<%= new_game_path %>'>Post a new game</a></div>
+</div>

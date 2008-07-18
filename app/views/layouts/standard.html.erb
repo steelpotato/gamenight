@@ -1,0 +1,18 @@
+<html>
+<head>
+    <%= render :partial => 'layouts/meta' %>
+    <%= render :partial => 'layouts/scripts' %>
+</head>
+<body>
+
+<div id='top'> 
+        <%= render :partial => 'layouts/header' %>
+        <div id='content' class='main'> 
+           <%= yield %>
+        </div>
+</div>
+<div id='bottom'>
+    <%= render :partial => 'layouts/copyright' %>
+</div>
+</body>
+</html>

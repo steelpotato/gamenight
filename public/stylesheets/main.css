@@ -1,0 +1,177 @@
+	
+	
+	/****************************
+			GLOBAL AREA
+	*****************************/
+    body,html { margin:0px; }  
+             
+    #top { min-height:400px; }
+    
+    #header{  height:154px; margin-top:8px; }
+    #header div.content { padding:10px; padding-top:57px;} 
+    #header div.img {float:left; margin-left:100px; }    
+	#header div.img img { vertical-align:middle; }
+    
+    div.search { float:right; margin-top:10px; }
+    div.search input { margin-left:10px; }
+    div.search input.search { width:250px; }
+
+
+    /****************************
+			MAIN CONTENT
+	*****************************/
+    #content { margin:0px auto; width:800px; clear:both; margin-top:0px; min-height:100%; position:relative; height:auto !important;}
+    
+    #content div.left { float:left; width:180px; margin-top:35px; margin-bottom:20px; }
+    #content div.inside { padding-left:180px; border:solid thick purple; } 
+
+   
+
+    select { width:150px;}    
+
+    div.gamebox { width:500px; margin-bottom:20px;}
+                              
+    /* Colors */  
+    body { background-color: #FBF0BE; }
+    body { background-color: #FFD; }
+    #top {  }                    
+    #header { background-color:#931C22; color:white; }
+    #header{  background-image:url('/images/bar.jpg'); background-repeat:repeat-x; }
+                                                      
+    #bottom { background-color:#7A1121; color:#FBF0BE; }
+    #bottom { border-top: solid 14px #922;}
+    #bottom { border-top: solid 14px #300;}
+    
+    div.gamebox { border:dashed 1px #AAA; background-color:#F6F6F6; }
+    div.text { color: #333; }   
+    div.gamebox div.title {color: #000; }
+    
+    /* Type */
+    body { font: 12px "Trebuchet MS", Arial, sans-serif; }  
+    div.gamebox div.title { font-size: 18px; font-weight:bold; text-align:center; }  
+
+	div.left h3 {  }
+    
+    
+    
+    
+    
+    div.gamebox div.stars { margin:0 auto; width:76px; }        
+    div.gamebox div.meta { float:left; margin-right:1em; }
+    
+    div.gamebox div.categories { clear:both; margin-left:10px; margin-bottom:10px; margin-right:10px; overflow:hidden; height:1.1em;}
+    div.gamebox div.meta div.stat { margin-top:8px; }
+    div.gamebox div.meta div.stat div.label { font-weight:bold; width:40px; float:left; text-align:right; margin-right:5px;}
+    
+           
+    div.gamebox.over { border:solid 1px #A44; background-color: #FEE; cursor:pointer; }
+    
+    a { text-decoration:none; }
+    a:hover { text-decoration:underline; } 
+    a:visited { color: #00E; }       
+
+	div.sorting, div.cancel, div.right.links { float:right; margin-top:12px; } 
+	div.sorting .selected { font-weight:bold; font-size: 14px; }
+	
+	div.links.right.second { margin-top:2px; }   
+	div.cancel.noprimary { margin-top:20px; }
+	
+	input.primary { font-weight:bold }
+	
+	h1 { margin-top:0px; }    
+	
+	div.left div.select { margin-bottom: 10px}    
+	div.left div.categories { margin-top:20px; }  
+	
+	div.inside div.footer { float:right; margin-bottom:1.5em; }
+	div.inside div.footer span.selected { font-weight:bold; font-size: 14px; } 
+	                        
+	
+	div.gamebox.list { padding:0;}
+	div.gamebox.list .meta { padding:10px; }
+	div.gamebox.list .text { padding:10px; }
+	                        
+	div.gamebox div.form { margin:5px; }
+	div.gamebox div.form span.label { font-weight:bold; width:80px; display:block; float:left; text-align:right; margin-right:8px; } 
+	div.gamebox div.form input.text { width: 350px; margin-top:-2px; }  
+	div.gamebox div.form span.field span.checkers { margin-right:16px; }
+	div.gamebox div.form select { margin-top:-2px; }
+	div.gamebox div.form div { margin-bottom: 15px; }  
+	
+	div.gamebox div.form textarea { width:100%; height:400px; }   
+	
+	
+	
+	div.gamebox.main div.text { clear:both; }
+	div.gamebox.main div.meta { float:none; }
+	div.gamebox.main div.stars { margin-left:0px;  }  
+	
+	div.gamebox.main div.text div.label { margin-bottom:.8em; margin-top:1em;}
+	
+	div.gamebox { padding:1em; }  
+	
+	div.gamebox.main div.tags div.label { margin-top:1em; margin-bottom:.2em; }  
+	
+	.label { font-weight:bold; color:#000; }  
+	div.gamebox { color:#444;}           
+	
+	div.gamebox h1, div.gamebox h2, div.gamebox h3 { border-bottom: solid 1px #AAA; margin-top:1.4em; margin-bottom:.8em; }
+	div.gamebox h1, div.gamebox h2, div.gamebox h3 { color:#000; }       
+	
+	
+	div.gamebox.comment div.label { margin-bottom:.4em;}
+	div.gamebox.main { padding-top:0; }
+	
+	                                       
+	
+	/****************************
+			BOTTOM AREA
+	*****************************/
+	#bottom { min-height:40px; margin-top:20px; bottom:0pt; position:absolute; right:0pt; left:0pt;}
+
+	#bottom { padding:1em; }
+	#bottom h1, #bottom h2, #bottom h3 { margin-top:0; color:#FFF;}
+	
+	#bottom div.about h2 { margin-bottom:.5em; }    
+	#bottom div.about { width: 280px; float:left; margin-right:40px; text-align:justify;} 
+	
+	#bottom div.categories h2 { margin-bottom:.5em; }    
+	#bottom div.categories { width: 300px; float:left; } 
+	
+	
+	#bottom div.final { clear:both; font-size:10px;  margin-top:20px; color:#666;}  
+	#bottom a { color: #FFF;} 
+	#bottom div.categories div.links { margin:10px; float:left; }
+	#bottom div.about div.links { margin:10px; float:left; }  
+	#bottom div.about div.links div { margin-bottom:.2em; }
+	#bottom div.categories div.links div { margin-bottom:.2em; }       
+	
+	
+	#content div.lefthome { float:left; margin-bottom:20px; } 
+	#content div.righthome { float:left; margin-top:20px; margin-left:20px;  }     
+	
+	#content div.lefthome div.mainlinks div { font-size:18px; margin:20px; }         
+	
+	div.lefthome div.banner { width:160px; float:left; margin:10px; height:220px; }
+	div.lefthome div.banner div.label { text-align:center; font-size:16pt; margin-bottom:0.5em; padding:0.4em; background-color:#ECC; font-weight:normal;}  
+	div.lefthome div.banner div.label { background-image: url('/images/bannerbg.jpg'); background-repeat:no-repeat; color:white;  }  
+	div.lefthome div.banner div.line { margin:0px auto; width:76px; margin-bottom: 1.4em;}
+	
+	
+	#header .img img { border:none; }
+	
+	/****************************
+			COMPONENTS
+	*****************************/
+	div.clear { clear:both; }
+	
+	div.linkbox { } 			/* Sets all children to be a particular width and wraps */
+	div.linkbox div { width: 60px; float:left; }
+	div.linkbox.small div { width:40px; }
+	div.linkbox.large div { width:80px; }
+	
+	div.disabled { !important; color:#AAA; }
+	div.disabled a { !important; color:#AAA; text-decoration:none; } /* cursor: pointer */
+	                             
+	
+	

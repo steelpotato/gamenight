@@ -4,6 +4,10 @@ class CreateCategories < ActiveRecord::Migration
       t.string :name
       t.timestamps
     end
+    
+    Category.create :name => 'Table'
+    Category.create :name => 'Party'
+    Category.create :name => 'Active'
   end
 
   def self.down

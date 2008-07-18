@@ -1,0 +1,48 @@
+<div class='gamebox'> 
+    <div class='form'>  
+        <%= start_form_tag :action => @action, :id => @game.id %>    
+        <div>
+            <span class='label'>Title</span>
+            <span class='field'><%= text_field 'game', 'title', :class => 'text' %></span>
+        </div>
+        <div>
+            <span class='label'>Game Type</span>
+            <span class='field'>
+                <%= collection_select(:game, :type_id, Type.find(:all), :id, :name) %>
+            </span>
+        </div> 
+        <div>
+            <span class='label'>Players</span>
+            <span class='field'>
+                <%= collection_select(:game, :min_players, Player.find(:all), :id, :name, :prompt => 'Minimum Players') %>
+                to   
+                <%= collection_select(:game, :max_players, Player.find(:all), :id, :name, :prompt => 'Maximum Players') %>
+            </span>
+        </div>
+        <div>
+            <span class='label'>Ages</span>
+            <span class='field'>    
+                <span class='checkers'><input type='checkbox' name='children'>Children</span>
+                <span class='checkers'><input type='checkbox' name='youth'>Youth</span>
+                <span class='checkers'><input type='checkbox' name='adults'>Adults</span>
+            </span>
+        </div>    
+        <div>
+            <span class='label'>Materials</span>
+            <span class='field'><a href='asdf'>Change Materials</a></span>
+        </div>    
+        <% #render :partial => 'categories' %>
+        <div>
+            <span class='label'>Link to Rules</span>
+            <span class='field'><%= text_field 'game', 'external_link', :class => 'text' %></span>
+        </div>
+        <div>     
+            <%= text_area 'game', 'description' %>
+        </div> 
+        <div> 
+            <%= submit_tag @submittext %>
+        </div>  
+        <%= end_form_tag %>
+        
+    </div>
+</div>

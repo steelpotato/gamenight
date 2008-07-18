@@ -1,8 +1,22 @@
 class GamesController < ApplicationController
+  layout 'standard'
   # GET /games
   # GET /games.xml
-  def index
+  
+  # Same as index, but uses a different title 
+  def search
     @games = Game.find(:all)
+    @categories = Category.find(:all)
+    @params = params
+
+    render :action => "index"
+  end
+  
+  def index
+    @players = Player.find(:all)
+    @games = Game.filter(params)
+    @categories = Category.find(:all)
+    @params = params
 
     respond_to do |format|
       format.html # index.html.erb

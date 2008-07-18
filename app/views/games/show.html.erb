@@ -1,6 +1,39 @@
+<div class='left'>
+</div>
+<div class='inside'>
+<div class='cancel'> 
+    <%= link_to "back", games_path() %> - 
+    <%= primary "Edit Game", edit_game_path(@game)  %>
+</div>
+<h1><%= @game.title %></h1> 
+<div class='gamebox main'> 
+    <div class='body'>   
+        <h3>Information</h3>
+        <div class='meta'>
+            <div class='stat'><div class='label'>Rating</div> - <img src='/images/star40.jpg'></div>
+            <!-- <div class='stat'><div class='label'>Type</div> - <% #Type.find(@game.type_id).name %></div> -->
+            <div class='stat'><div class='label'>Players</div> - <%= players(@game) %></div>
+            <!-- <div class='stat'><div class='label'>Ages</div> - Children, Youth</div>  -->
+        </div>
+        <div class='tags'>                                                         
+            <div class='label'>Categories</div>
+            <div class='links'>Chess, Something, Cheese, Chinese People</div>
+        </div>
+        <div class='text'>
+            <h3>Description</h3>
+            <p><%= h(@game.description).gsub(/\n/, '<br>') %>
+        </div> 
+        <!-- <div class='text'>
+            <h3>Link to Rules</h3>
+            <p><a href='<% #h(@game.external_link) %>' target="_blank"><% #link(@game) %></a></p>
+        </div> -->
+    </div>
+</div> 
 
-<%= @game.title %><br>
-<%= @game.description %><br>
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
-<%= link_to 'Back', games_path %>
+<% #render :partial => 'comments' %>
+
+<div class='footer'>
+    
+</div>      
+</div>

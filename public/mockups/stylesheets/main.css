@@ -1,0 +1,44 @@
+html, body {
+	margin:0; padding:0;
+}
+
+p {
+	font-weight:bold;
+}
+
+div {
+	font-family:Verdana, Arial;
+	font-size:12px;
+}
+
+a {
+	font-weight:bold;
+}
+
+#banner {
+	height:134px;
+	background-color: black;
+}
+
+#header {
+	height:264px;
+	background-image:url("../images/background.gif");
+}
+
+#banner div.logo {
+	border:solid 1px red;
+	width: 50%;
+	position: relative;
+	top: 40px;
+	left: 40px;
+}
+
+#banner div.links {
+	color:#CCCCCC;
+	font-weight:bold;
+	float: right;
+	border:solid 1px red;
+	position: relative;
+	top: 40px;
+	right: 45px;
+}

@@ -1,6 +1,6 @@
-Rakefile
-doc
-generate
-log
-script
 .DS_Store
+log/*.log
+tmp/**/*
+index
+doc/api
+doc/app

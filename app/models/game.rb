@@ -1,6 +1,5 @@
 class Game < ActiveRecord::Base
   validates_length_of :title, :within => 1..50, :message => "must be present"
-  # validates_presence_of :description, :message => "can't be blank"
   has_and_belongs_to_many :categories
   has_many :comments
   

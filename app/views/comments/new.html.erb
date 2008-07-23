@@ -1,11 +1,9 @@
 <h1>New comment</h1>
 
-<% form_for(@comment) do |f| %>
+<% form_for ([@game, @comment]) do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.submit "Create" %>
-  </p>
+  <%= f.text_area :body %>
+  <p><%= f.submit "Create" %></p>
 <% end %>
 
-<%= link_to 'Back', game_comments_path(@game) %>
+<%= link_to 'Back', game_path(@game) %>

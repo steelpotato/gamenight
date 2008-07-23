@@ -5,3 +5,18 @@
 <h1><%= @game.title %></h1> 
 <h3>Description</h3>
 <p><%= h(@game.description).gsub(/\n/, '<br>') %></p>
+<h3>Comments</h3>
+<% @game.comments.each do |c| %>
+    <p><%= c.body %></p>
+<% end %>
+
+<h4>Add a comment</h4>
+<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
+
+<% form_for ([@game, @comment]) do |f| %>
+  <%= f.error_messages %>
+  <%= f.text_area :body %>
+  <p><%= f.submit "Create" %></p>
+<% end %>
+
+

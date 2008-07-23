@@ -1,4 +1,29 @@
+===========================
+        TODO
+===========================
+NEXT
+√ - Comments for games
+O - Users
+O - Login/Sessions
 
+COMMENTS
+O - Ajax Submit it!
+
+USERS
+O - Create, etc
+O - Login
+O - Authentication
+O - Add to Comments
+O - Add to Games
+
+BROWSING GAMES
+O - Make searching just like normal browsing (an extra parameter)
+O - Include some kind of title?
+O - "Browse by Category" button takes you to a page with all the categories?
+
+QUESTIONS
+Q - What happens when you click a category during browse?
+Q - Which categories are displayed? Just the ones corresponding to your current filter?
 
 ===========================
     SETUP INSTRUCTIONS 
@@ -9,3 +34,4 @@ ACTS_AS_FERRET
     http://www.jumbabox.com/2008/05/acts_as_ferret-tutorial/
     sudo gem install ferret
     ruby script/plugin install svn://projects.jkraemer.net/acts_as_ferret/tags/stable/acts_as_ferret
+        S - this second step should be unneccesary, since I've checked vendor/ into source control

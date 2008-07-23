@@ -28,6 +28,7 @@ class GamesController < ApplicationController
   # GET /games/1.xml
   def show
     @game = Game.find(params[:id])
+    @comment = @game.comments.build
 
     respond_to do |format|
       format.html # show.html.erb

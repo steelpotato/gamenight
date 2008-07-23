@@ -5,14 +5,11 @@
 </head>
 <body>
 
-<div id='top'> 
-        <%= render :partial => 'layouts/header' %>
-        <div id='content' class='main'> 
-           <%= yield %>
-        </div>
+<%= render :partial => 'layouts/banner' %>
+<div id='content'>
+    <%= yield %>
 </div>
-<div id='bottom'>
-    <%= render :partial => 'layouts/copyright' %>
-</div>
+
+<%= render :partial => 'layouts/copyright' %>
 </body>
 </html>

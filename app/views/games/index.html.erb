@@ -1,32 +1,7 @@
-<div id='content' class='main'> 
-    <div class='left'>   
-        <%= render :partial => 'filter' %>
-    </div>
-    <div class='inside'>
-        <div class='sorting disabled'>
-            <span class='title'>Sort By -</span>
-            <span class='selected'>Best</span>
-            <a href='asdf'>Worst</a>
-            <a href='asdf'>New</a>
-            <a href='asdf'>Old</a>
-        </div>
-        <% if @games.blank? %>
-            <h1>No Games</h1>
-            <p>No games match     </p>
-
-        <% else %>
-            <h1>Games - <%= @category_name %></h1>
-            <% @games.each do |game| %> 
-                <%= render :partial => 'minigame', :locals => {:game => game} %>
-            <% end %>      
+<%= render :partial => 'filter' %>
+<h1>Games - <%= @category_name %></h1>
+<% @games.each do |game| %> 
+    <%= render :partial => 'minigame', :locals => {:game => game} %>
+<% end %>      
             
 
-            <div class='footer disabled'>
-                <span class='nav'><a href='bob'>Prev</a></span> - <a href='asdf'>1</a> <span class='selected'>2 </span> <a href='bob'>3</a> <a href='asdf'>4</a> <a href='asdf'>5</a> <a href='asdf'>6</a> - <span class='nav'><a href='bob'>Next</a></span>
-            </div>  
-        <% end %>
-    </div>
-    
-                    
-    
-</div>

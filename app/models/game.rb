@@ -4,9 +4,15 @@ class Game < ActiveRecord::Base
   has_and_belongs_to_many :categories
   has_many :comments
   
+  acts_as_ferret :fields => [:title, :description]
+  
   # This just works!  That is so freaking cool I can't stand it
   def to_param 
     id.to_s + "_" + title.gsub(/\s/, '_').gsub(/[^-\w]/,'').downcase
+  end
+  
+  def self.search (query)
+    Game.find_by_contents(query) unless query.nil?
   end
   
   def self.filter(params)  

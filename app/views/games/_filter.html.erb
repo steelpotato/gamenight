@@ -1,23 +1,9 @@
-<div class='filter'>
-    <h3>Now Showing</h3>
-    <div class='select'>   
-        <%= render :partial => 'players' %>
-        <!-- < #options_for_players() %> -->
-    </div>
+<h3>Now Showing</h3>
+<%= render :partial => 'players' %>
+<!-- < #options_for_players() %> -->
 
-    <div class='disabled'>Any Age Group</div>
-    <!-- <div class='select'><select>
-        <option>Any Age Group</option>
-        <option>Children</option>
-        <option>Youth</option>
-        <option>Adults</option>
-    </select></div>    -->
-</div>
-
-<div class='categories'>
 <h3>Categories</h3>
-    <div><%= link_to 'Any', filtered_games_path(:category => nil) %></div>
+<div><%= link_to 'Any', filtered_games_path(:category => nil) %></div>
 <% @categories.each do |c| %>
-    <div><a href='<%= filtered_games_path(:category => c) %>'><%= c.name %></a></div>
+    <div><%= link_to c.name, filtered_games_path(:category => c) %></div>
 <% end %>
-</div>

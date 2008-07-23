@@ -5,7 +5,7 @@ class GamesController < ApplicationController
   
   # Same as index, but uses a different title 
   def search
-    @games = Game.find(:all)
+    @games = Game.search(params[:q])
     @categories = Category.find(:all)
     @params = params
 

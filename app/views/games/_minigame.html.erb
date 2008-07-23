@@ -1,17 +1,7 @@
-<div class='gamebox list' href='<%= game_path(game) %>'>
-    <div class='body'> 
-        <div class='meta'>
-            <div class='title'><%= game.title %></div>
-            <center><div class='stars'><img src='/images/star30.jpg'></div></center>
-            <div class='stat'><div class='label'>Players</div> - <%= players(game) %></div>
-            <div class='stat'><div class='label'>Ages</div> - Children, Youth</div>
-        </div>
-        <div class='text'>
-            <%= blurb(game) %>
-        </div>
-    </div>
-    <div class='categories'>
-          <span><b>Categories</b> - </span>
-          <span><a href='bob'>Strategy</a>, <a href='bob'>Asdf</a>, Tennis Courts, Moms, <a href='bob'>Strategy</a>, <a href='bob'>Asdf</a>, Tennis Courts, Moms, <a href='bob'>Strategy</a>, <a href='bob'>Asdf</a>, Tennis Courts, Moms</span>
-    </div>
-</div>   
+<% link_to game_path(game) do %>
+    <h4><%= game.title %></h4>
+<% end %>
+<div>Players - <%= players(game) %></div>
+<div class='text'>
+    <%= blurb(game) %>
+</div>

@@ -1,10 +1,12 @@
 <select class='link' href='<%= filtered_games_path(:players => "VALUE") %>'>
     <option value='any'>Any # of Players</option>
-    <% @players.each do |p| %>
+    <% unless @players.nil? %>
+    <% @players.each do |p|  %>
         <% if p.id == params[:players].to_i %>
             <option selected value='<%= p.id %>'><%= p.name %></option>
         <% else %>
             <option value='<%= p.id %>'><%= p.name %></option>
         <% end %>
+    <% end %>
     <% end %>
 </select>

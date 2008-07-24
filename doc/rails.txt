@@ -1,0 +1,35 @@
+===========================
+        TODO
+===========================
+NEXT
+√ - Comments for games
+O - Users
+O - Login/Sessions
+
+COMMENTS
+O - Ajax Submit it!
+
+GAMES
+O - Age Groups
+
+CATEGORIES
+√ - Simple Create and List Categories (without a reference to games)
+√ - Show game categories
+O - Checkboxes to add a game to certain categories
+O - Actually add the game
+
+USERS
+O - Create, etc
+O - Login
+O - Authentication
+O - Add to Comments
+O - Add to Games
+
+BROWSING GAMES
+O - Make searching just like normal browsing (an extra parameter)
+O - Include some kind of title?
+O - "Browse by Category" button takes you to a page with all the categories?
+
+QUESTIONS
+Q - What happens when you click a category during browse?
+Q - Which categories are displayed? Just the ones corresponding to your current filter?

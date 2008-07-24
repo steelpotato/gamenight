@@ -1,7 +1,9 @@
 class Game < ActiveRecord::Base
   validates_length_of :title, :within => 1..50, :message => "must be present"
-  has_and_belongs_to_many :categories
-  has_many :comments
+  has_and_belongs_to_many :categories      
+  validates_presence_of :description
+  has_many :comments                   
+  validates_length_of :category_ids, :minimum => 1, :message => "must have at least 1 category"
   
   acts_as_ferret :fields => [:title, :description]
   

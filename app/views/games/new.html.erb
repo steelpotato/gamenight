@@ -1,14 +1,6 @@
-<div class='left'>
-</div>
-<div class='inside'>
-<div class='cancel'>
-    <%= link_to "cancel", "/" %>
-</div>
 <h1>Add a New Game</h1>
-    <% @action = 'create' %>
-    <% @submittext = 'Create Game' %>
-    <%= render :partial => 'form' %>
-<div class='footer'>
-    
-</div>
-</div>
+<% render :layout => "form" do %>
+    <%= submit_tag "Create Game" %>
+<% end %>
+
+<%= link_to 'Back', games_path %>

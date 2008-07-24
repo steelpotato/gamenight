@@ -1,7 +1,9 @@
+<%= link_to "Post a new game", new_game_path() %>
 <%= render :partial => 'filter' %>
-<h1>Games - <%= @category_name %></h1>
+<h1>Games</h1>
 <% @games.each do |game| %> 
     <%= render :partial => 'minigame', :locals => {:game => game} %>
 <% end %>      
+
             
 

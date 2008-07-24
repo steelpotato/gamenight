@@ -1,0 +1,11 @@
+
+===========================
+    SETUP INSTRUCTIONS 
+===========================
+
+ACTS_AS_FERRET
+    http://www.railsenvy.com/2007/2/19/acts-as-ferret-tutorial
+    http://www.jumbabox.com/2008/05/acts_as_ferret-tutorial/
+    sudo gem install ferret
+    ruby script/plugin install svn://projects.jkraemer.net/acts_as_ferret/tags/stable/acts_as_ferret
+        S - this second step should be unneccesary, since I've checked vendor/ into source control

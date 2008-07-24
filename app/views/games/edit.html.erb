@@ -1,12 +1,7 @@
 <h1>Editing game</h1>
 
-<% form_for(@game) do |f| %>
-  <%= f.error_messages %>
-  <div><%= f.text_field :title %></div>
-  <div><%= f.text_area :description %></div>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
+<% render :layout => "form" do %>
+    <%= submit_tag "Update" %>
 <% end %>
 
 <%= link_to 'Show', @game %> |

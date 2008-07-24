@@ -3,8 +3,16 @@
     <%= primary "Edit Game", edit_game_path(@game)  %>
 </div>
 <h1><%= @game.title %></h1> 
-<h3>Description</h3>
-<p><%= h(@game.description).gsub(/\n/, '<br>') %></p>
+
+<p><b>Description</b> <%= h(@game.description).gsub(/\n/, '<br>') %></p>
+<p><b>Categories</b>
+    <% @game.categories.each do |c| %>
+        <%= link_to c.name, games_path(:category => c)%>
+    <% end %>
+</p>
+
+
+<!-- Comments -->
 <h3>Comments</h3>
 <% @game.comments.each do |c| %>
     <p><%= c.body %></p>

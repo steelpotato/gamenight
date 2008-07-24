@@ -6,16 +6,13 @@ class GamesController < ApplicationController
   # Same as index, but uses a different title 
   def search
     @games = Game.search(params[:q])
-    @categories = Category.find(:all)
     @params = params
 
     render :action => "index"
   end
   
   def index
-    @players = Player.find(:all)
     @games = Game.filter(params)
-    @categories = Category.find(:all)
     @params = params
 
     respond_to do |format|
@@ -71,7 +68,8 @@ class GamesController < ApplicationController
 
   # PUT /games/1
   # PUT /games/1.xml
-  def update
+  def update               
+    params[:game][:category_ids] ||= []
     @game = Game.find(params[:id])
 
     respond_to do |format|

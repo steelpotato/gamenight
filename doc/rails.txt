@@ -4,19 +4,24 @@
 NEXT
 √ - Comments for games
 O - Users
-O - Login/Sessions
+O - Login/Sessions   
+√ - Players
 
 COMMENTS
 O - Ajax Submit it!
 
-GAMES
-O - Age Groups
+AGES  
+O - wait for use cases
+
+PLAYERS
+√ - add it back in   
+√ - make it filter again
 
 CATEGORIES
 √ - Simple Create and List Categories (without a reference to games)
 √ - Show game categories
-O - Checkboxes to add a game to certain categories
-O - Actually add the game
+√ - Checkboxes to add a game to certain categories
+√ - Actually add the game
 
 USERS
 O - Create, etc
@@ -33,3 +38,6 @@ O - "Browse by Category" button takes you to a page with all the categories?
 QUESTIONS
 Q - What happens when you click a category during browse?
 Q - Which categories are displayed? Just the ones corresponding to your current filter?
+
+DESIGN 
+O - Get a critque from Ken and Paul

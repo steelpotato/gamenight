@@ -5,7 +5,9 @@
 <h1><%= @game.title %></h1> 
 
 <p><b>Description</b> <%= h(@game.description).gsub(/\n/, '<br>') %></p>
-<p><b>Categories</b>
+<p>Players: <%= players(@game) %>
+</p>
+<p>Categories:
     <% @game.categories.each do |c| %>
         <%= link_to c.name, games_path(:category => c)%>
     <% end %>
@@ -21,7 +23,10 @@
 <h4>Add a comment</h4>
 <% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
 
-<% form_for ([@game, @comment]) do |f| %>
+<%= link_to_remote 'Testing', :url => '/games/test', :update => 'results', :positon => :bottom %>              
+              
+<div id='results'></div>
+<% remote_form_for [@game, @comment], :update => 'results' do |f| %>
   <%= f.error_messages %>
   <%= f.text_area :body %>
   <p><%= f.submit "Create" %></p>

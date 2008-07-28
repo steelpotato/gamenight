@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(:version => 20080715134546) do
   end
 
   create_table "categories_games", :id => false, :force => true do |t|
-    t.integer  "game_id",     :limit => 11
-    t.integer  "category_id", :limit => 11
+    t.integer  "game_id",     :limit => 11, :null => false
+    t.integer  "category_id", :limit => 11, :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

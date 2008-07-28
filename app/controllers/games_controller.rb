@@ -19,6 +19,12 @@ class GamesController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @games }
     end
+  end    
+  
+  def test
+    respond_to do |format|
+      format.js { render :text => 'bob is fat!' }
+    end
   end
 
   # GET /games/1

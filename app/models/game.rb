@@ -14,7 +14,7 @@ class Game < ActiveRecord::Base
   
   def self.search (query)
     Game.find_by_contents(query) unless query.nil?
-  end
+  end   
   
   def self.filter(params)  
          

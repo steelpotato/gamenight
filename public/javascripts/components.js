@@ -17,5 +17,6 @@ $(function () {
 	
 	$('.disabled a').click(function () {
 		return false;
-	})
+	})    
+	
 });

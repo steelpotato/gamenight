@@ -12,5 +12,8 @@ module ApplicationHelper
       super(*args)
     end
   end
-  
+       
+  def select_link(url, html_options, selected = nil)
+    "<select class='link' href='#{url}'>" << options_for_select(html_options, selected ) << "</select>"
+  end
 end

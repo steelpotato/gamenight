@@ -15,13 +15,14 @@ module GamesHelper
   
   def players (game)
     @min = Player.find(game.min_players).name
-    @max = Player.find(game.max_players).name
+    @max = Player.find(game.max_players).name 
     
-    if (game.min_players == game.max_players)
-      return @min
-    end
-      
-    return @min + "-" + @max
+    return @min if (game.min_players == game.max_players)
+    return @min + "-" + @max         
+  end
+                                                
+  def player_options()
+    Player.find(:all).collect {|p| [p.name, p.id]}
   end
   
 end

@@ -2,8 +2,16 @@
 
 <% form_for(@game) do |f| %>
     <%= f.error_messages %>
+    <div>Title</div>
     <div><%= f.text_field :title %></div>
+    
+    <div>Description</div>
     <div><%= f.text_area :description %></div>
+    
+    <div>Players</div>
+    <div>
+        <%= f.select :min_players, player_options() %> to <%= f.select :max_players, player_options() %> 
+    </div>
     
     <h4>Categories</h4>
     <% for category in Category.find(:all) %>

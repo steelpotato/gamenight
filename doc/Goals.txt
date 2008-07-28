@@ -1,0 +1,19 @@
+INTERNAL BETA :: October 1st - functionally complete - all use cases implemented   
+
+MAIN GOALS
+    O - Use Cases - finish all questions - July 31st
+    O - FW Mockups - A page for each use case - August 7th
+    O - HTML Mockups - (code review by sean for each one) - September 1st
+    O - Advanced HTML - (effects) - September 21st
+    O - Implement all use cases in Rails - September 1st
+    
+DOMAIN NAME
+    O - Offer on gamenight.com
+    O - contact gameshare.com directly
+    
+    Keep the name without url? No... people wouldn't take it seriously
+    gamestorm in stead of brainstorm
+    gameshare.com
+    gamenight.com 
+    
+    

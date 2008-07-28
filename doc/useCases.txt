@@ -1,0 +1,112 @@
+Use Cases:
+
+BIG QUESTIONS
+Q - Global Navigation
+Q - Variations vs References --- how to encourage correct behavior / what to name it
+
+SEARCH FOR GAMES
+
+1. User enters search items in search box. 
+            -- GN displays all games matching by title and description.
+            -- GN ranks searches in the following order
+                1. String matched.
+                2. All words match.
+                3. Any words match.
+            Within each of these categories, GN should rank internally by rating.
+    
+            ALPHA: Just use ferret search - all words in any order in title or description, ranked only by score
+
+BROWSE FOR GAMES (ALL)
+
+1. User selects "browse games" link from main screen. -- GN displays all games.
+2. User selects "filter" link at top of screen. -- GN displays advanced search options.
+3. User makes filter selections, clicks "filter" -- GN filters results. -- resubmits
+
+BROWSE FOR GAMES (BY CATEGORY)
+
+1. User selects "see categories link" from main page. -- GN displays page with all categories.
+2. User selects one by link. -- GN displays all games with that tags -- home browsing screen
+3. To further filter, user selects "filter" link as described above.
+
+POST A GAME
+
+1. User select POST A GAME link in the global toolbar. -- GN takes user to post-game page.
+2. User fills out form, submits. -- GN shows the game listing + success message. Or form + error
+3. ??? how to add back?
+
+GLOBAL NAVIATION
+Q - How do people get "out" of viewing a game?
+Q - What about when you just posted one?
+Q - What about putting "Post a Game" "Search" and "Browse Games" global?  "Browse by Category?"
+
+EDIT EXISTING GAMES
+
+1. User clicks "edit game" link on game page. -- GN takes user to post-game page, with info in form. 
+2. User can also click "edit variation" in a small link next to variation title.  -- uses inline form
+3. User edits game as necessary, clicks "save game" button. -- GN saves changes AND previous version. Takes user back to game page.
+
+POST GAME VARIATION
+
+1. User clicks the "Post a variation" link at the bottom of the screen. -- GN displays in-line form for alternative rules, simpler version of main game-post form, allowing to add new number of players and new age range for this variation.                                                         
+Q - ?? Variations that change the number of players and category should be a separate entry
+Q - ?? Help text?
+
+2. User clicks "Save Variation" link at the bottom of form. -- GN submits variation immediately, displays new game variation below.
+*or*
+3. User clicks "cancel" link, form disappears.    
+
+REFERENCES
+Q - What should we call it? We should encourage people to add "Bughouse" as a "reference" for chess, instead of a variation                                            
+
+FILTER GAMES
+
+Refer to the two "Browse for games" use cases.
+
+RATE GAMES
+
+1. User, while viewing game, clicks which star rating should appear. -- GN checks to see if user is logged in.
+*If logged in*
+2. GN displays success message, "Rating saved!"
+
+*If not logged in*
+2. Instead of success message, user is prompted by link to log in now. -- GN takes user to login page.
+3. User logs in. -- GN takes user back to game page to rate the game.
+
+POST A COMMENT
+
+1. User fills out the comment form at bottom of game screen and clicks "Submit Comment." -- GN checks to see if user is logged in.
+*If logged in*
+2. GN takes user back to game page with success message, "comment added!"
+
+*If not logged in*
+
+1. GN takes user to login screen, user logs in.
+2. GN takes user back to game page with success message, "comment added!"
+
+ADVANCED SEARCH
+
+1. User clicks "Advanced search" link just below the search bar. -- GN displays the same form as the "filter" link, in-line. doesn't show any games
+2. User selects all search items, clicks "search." -- GN shows results, same page as every other results page with "filter" link on top.
+3. Message: All results are optional
+*or*
+3. User clicks the cancel link. -- GN makes the in-line advanced search form disappear.
+
+LOGIN
+
+1. User clicks the "login" link from anywhere. -- GN takes user to the login page, asking for username and password.
+2. User fills out username and password, clicks "login" button. -- GN takes them to main page with success message, or to page they were on when they went to the login screen.
+*or*
+3. If not yet a user, user clicks "Click here to sign up!" -- GN takes user to signup page. 
+
+LOGGED IN
+1. Changes to "My Account __ Logout"      
+
+SIGNUP
+
+1. User clicks "Click here to sign up!" -- GN takes user to signup page.
+2. User fills out information, clicks "sign me up!" at bottom of screen. -- GN takes them to main page with success message. GN sends email with username and password.
+                                                                           
+EDIT ACCOUNT INFORMATION
+
+1. User clicks "my account link" in top right-hand corner. -- GN takes them to signup page with filled out information.
+2. User edits information (except username) and clicks "save changes" at the bottom. -- GN takes back to main page, with success.                                                                                                                                                                                         

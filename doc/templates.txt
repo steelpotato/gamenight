@@ -1,0 +1,8 @@
+===========================
+  MY ACTION PACKED ACTION
+===========================
+Unobtrusive Javascript -- don't use rails' crap, just use classes and attributes?  But rails doesn't let you specify attributes, just classes. 
+
+Hmm... that makes it harder
+
+I could override the helpers... 

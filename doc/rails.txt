@@ -8,7 +8,7 @@ O - Login/Sessions
 √ - Players
 
 COMMENTS
-O - Ajax Submit it!
+√ - Ajax Submit it!
 
 AGES  
 O - wait for use cases
@@ -41,3 +41,7 @@ Q - Which categories are displayed? Just the ones corresponding to your current 
 
 DESIGN 
 O - Get a critque from Ken and Paul
+
+SPAM
+O - Build a human-checking question thing into every form
+O - Add it to all submit actions

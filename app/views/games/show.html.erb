@@ -16,17 +16,15 @@
 
 <!-- Comments -->
 <h3>Comments</h3>
+<div id='comments'>
 <% @game.comments.each do |c| %>
-    <p><%= c.body %></p>
+    <%= render :partial => 'comment', :locals => {:c => c} %>
 <% end %>
+</div>
 
 <h4>Add a comment</h4>
-<% if flash[:notice] %><div class="notice"><%= flash[:notice] %></div><% end %>
-
-<%= link_to_remote 'Testing', :url => '/games/test', :update => 'results', :positon => :bottom %>              
-              
 <div id='results'></div>
-<% remote_form_for [@game, @comment], :update => 'results' do |f| %>
+<% remote_form_for [@game, @comment] do |f| %>
   <%= f.error_messages %>
   <%= f.text_area :body %>
   <p><%= f.submit "Create" %></p>

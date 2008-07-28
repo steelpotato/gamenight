@@ -1,0 +1,10 @@
+
+if @comment.save
+  page.message "Comment added successfully"
+  page.insert_comment @comment
+  page['comment_body'].val ''
+  
+else
+  page.replace_html 'results', 'Comment could not be added'
+  
+end

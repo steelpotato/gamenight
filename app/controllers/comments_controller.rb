@@ -48,19 +48,6 @@ class CommentsController < ApplicationController
   # POST /comments.xml
   def create
     @comment = @game.comments.build(params[:comment])
-
-    respond_to do |format|
-      if @comment.save
-        # flash[:notice] = 'Comment was successfully created.'
-        format.html { redirect_to(@game) }
-        format.xml  { render :xml => @comment, :status => :created, :location => @comment }
-        format.js   { render :text => 'Comment was successfully created' }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @comment.errors, :status => :unprocessable_entity }
-        format.js   { render :text => 'unable to add comment'}
-      end
-    end
   end
 
   # PUT /comments/1

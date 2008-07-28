@@ -1,6 +1,12 @@
 ===========================
         TODO
 ===========================
+
+IMPORTANT TO LEARN
+O - More ActiveRecord
+O - Session Management
+O - Unit Testing
+
 NEXT
 √ - Comments for games
 O - Users

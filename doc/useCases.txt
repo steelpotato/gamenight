@@ -3,6 +3,7 @@ Use Cases:
 BIG QUESTIONS
 Q - Global Navigation
 Q - Variations vs References --- how to encourage correct behavior / what to name it
+Q - Messages - should they appear contextually or globally (Adding a comment -- success and error)
 
 SEARCH FOR GAMES
 

@@ -1,5 +1,5 @@
 ===========================
-        TODO
+        FEATURES
 ===========================
 
 IMPORTANT TO LEARN
@@ -11,7 +11,11 @@ NEXT
 √ - Comments for games
 O - Users
 O - Login/Sessions   
+O - Validations on Models
 √ - Players
+
+GAMES
+O - pagination
 
 COMMENTS
 √ - Ajax Submit it!
@@ -28,6 +32,7 @@ CATEGORIES
 √ - Show game categories
 √ - Checkboxes to add a game to certain categories
 √ - Actually add the game
+O - Change to a has_many :through relationship
 
 USERS
 O - Create, etc
@@ -48,6 +53,27 @@ Q - Which categories are displayed? Just the ones corresponding to your current 
 DESIGN 
 O - Get a critque from Ken and Paul
 
+EXTRAS
+O - Rss Feeds - autodetect
+
+===========================
+    UNDER-THE-HOOD
+===========================
+
+MODELS
+O - Validations
+O - Report on Validations
+
 SPAM
 O - Build a human-checking question thing into every form
 O - Add it to all submit actions
+
+CACHING
+O - Finish caching chapter
+O - Implement page caching
+O - Implement Action Caching
+O - Implement Fragment Caching
+O - Expire on time
+
+BENCHMARKING
+O - :include statements on associations? (N+1 Selects)

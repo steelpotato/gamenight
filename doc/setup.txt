@@ -9,3 +9,6 @@ ACTS_AS_FERRET
     sudo gem install ferret
     ruby script/plugin install svn://projects.jkraemer.net/acts_as_ferret/tags/stable/acts_as_ferret
         S - this second step should be unneccesary, since I've checked vendor/ into source control
+        
+JRAILS
+    /script/plugin install http://ennerchi.googlecode.com/svn/trunk/plugins/jrails

@@ -1,8 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   
-  map.search 'games/search', :controller => "games", :action => "search"     
-  
   map.connect 'games/test', :controller => "games", :action => "test"
+  map.search 'games/?q=:q', :controller => "games", :action => "search"
   
   map.resources :categories do |category|
     category.resources :games

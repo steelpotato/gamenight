@@ -1,6 +1,8 @@
 class HomeController < ApplicationController
   layout 'standard'
+  
+  caches_page :index
+  
   def index
-    @categories = Category.find(:all)
   end
 end

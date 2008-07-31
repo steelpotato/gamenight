@@ -1,0 +1,16 @@
+<html>
+<head>
+    <%= render :partial => 'layouts/meta' %>
+    <%= render :partial => 'layouts/scripts' %>
+</head>
+<body>
+
+<%= render :partial => 'layouts/banner' %>
+<div id='content'>
+    <div id='left'><%= yield :left %></div>
+    <div id='main'><%= yield %></div>
+</div>
+
+<%= render :partial => 'layouts/copyright' %>
+</body>
+</html>

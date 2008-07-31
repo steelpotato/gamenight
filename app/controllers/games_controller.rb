@@ -1,15 +1,14 @@
 class GamesController < ApplicationController
-  layout 'standard'
+  layout 'columns'
   # GET /games
   # GET /games.xml
   
   # Same as index, but uses a different title 
-  def search
-    @games = Game.search(params[:q])
-    @params = params
-
-    render :action => "index"
-  end
+  # def search
+  #   @games = Game.search(params[:q])
+  #   @params = params
+  #   render :action => "index"
+  # end
   
   def index
     @games = Game.filter(params)

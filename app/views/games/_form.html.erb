@@ -17,7 +17,7 @@
     <% for category in Category.find(:all) %>
         <div>
             <%= check_box_tag 'game[category_ids][]', category.id, @game.categories.include?(category) %>  
-            <%= category.name %>
+            <%= h(category.name) %>
         </div>
     <% end %>
     <div></div>

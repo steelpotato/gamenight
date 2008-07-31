@@ -2,25 +2,15 @@
     <%= link_to "back", games_path() %> - 
     <%= primary "Edit Game", edit_game_path(@game)  %>
 </div>
-<h1><%= @game.title %></h1> 
 
-<p><b>Description</b> <%= h(@game.description).gsub(/\n/, '<br>') %></p>
-<p>Players: <%= players(@game) %>
-</p>
-<p>Categories:
-    <% @game.categories.each do |c| %>
-        <%= link_to c.name, games_path(:category => c)%>
-    <% end %>
-</p>
+<h1><%= h(@game.title) %></h1> 
+<p><b>Description</b> <%= description(@game) %></p>
+<p>Players: <%= players(@game) %></p>
 
+<p>Categories: <%= render :partial => 'category', :collection => @game.categories %></p>
 
-<!-- Comments -->
 <h3>Comments</h3>
-<div id='comments'>
-<% @game.comments.each do |c| %>
-    <%= render :partial => 'comment', :locals => {:c => c} %>
-<% end %>
-</div>
+<div id='comments'><%= render :partial => 'comment', :collection => @game.comments %></div>
 
 <h4>Add a comment</h4>
 <div id='results'></div>

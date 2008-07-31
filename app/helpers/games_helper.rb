@@ -25,4 +25,8 @@ module GamesHelper
     Player.find(:all).collect {|p| [p.name, p.id]}
   end
   
+  def description(game)
+    h(game.description).gsub(/\n/, '<br>')
+  end
+  
 end

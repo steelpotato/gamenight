@@ -4,5 +4,5 @@
 <h3>Categories</h3>
 <div><%= link_to 'Any', filtered_games_path(:category => nil) %></div>
 <% for c in Category.find(:all) %>
-    <div><%= link_to c.name, filtered_games_path(:category => c) %></div>
+    <div><%= link_to h(c.name), filtered_games_path(:category => c) %></div>
 <% end %>

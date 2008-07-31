@@ -36,7 +36,21 @@ class Game < ActiveRecord::Base
     
     finalconditions = conditions.any? ? [conditions.join(' and '), variables] : nil; 
     
-    return Game.find(:all, :conditions => finalconditions, :include => includes)
+    query = (params.has_key? :q) ? params[:q] : '*'
+    
+    logger.info 'Query ' + query
+    logger.info 'Final Conditions' + finalconditions.to_s
+    
+    results = Game.find_with_ferret(query, {}, {:conditions => finalconditions, :include => includes})
+  end
+
+    # I don't know how to to do this without changing the main find() call
+    # if params.has_key? :q 
+    # else
+    #   results = Game.find(:all, :conditions => finalconditions, :include => includes)
+    # end
+    
+    results
   end
   
 end

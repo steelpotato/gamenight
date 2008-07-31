@@ -2,8 +2,12 @@
 <head>
     <%= render :partial => 'layouts/meta' %>
     <%= render :partial => 'layouts/scripts' %>
+    <%= yield :head %>
 </head>
-<body>
+<body class='<%= controller.controller_name %> <%= controller.action_name %>'> <!-- allows us to style things for individual actions or controllers -->
+    <!-- Then I can use css to position these bad boys -->
+    <%= content_tag 'div', h(flash[:notice]), :class => 'notice', :id => 'notice' if flash[:notice] %> 
+    <%= content_tag 'div', h(flash[:error]), :class => 'notice error', :id => 'error' if flash[:error] %> 
 
 <%= render :partial => 'layouts/banner' %>
 <div id='content'>

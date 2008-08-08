@@ -18,5 +18,6 @@ $(function () {
 	$('.disabled a').click(function () {
 		return false;
 	})    
-	
+
+	$(this).nemesis_init();
 });

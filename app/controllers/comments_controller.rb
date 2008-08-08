@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.xml
   def index
-    @comments = @game.comments.find(:all)
+    @comments = @game.comments.all
 
     respond_to do |format|
       format.html # index.html.erb

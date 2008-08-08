@@ -3,10 +3,11 @@
 
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
+  session :off, :if => lambda {|req| req.user_agent =~ /(Google|Slurp)/i}
 
   # See ActionController::RequestForgeryProtection for details
   # Uncomment the :secret if you're not using the cookie session store
-  protect_from_forgery # :secret => 'cb8641fe07e131e591a5c0686e002ed6'
+  protect_from_forgery :secret => 'cb8641fe07e131e591a5c0686e002ed6'
   
   # See ActionController::Base for details 
   # Uncomment this to filter the contents of submitted sensitive data parameters

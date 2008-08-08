@@ -1,5 +1,11 @@
 <%= link_to "Browse Games" , games_path() %>
-<% form_tag search_path(), :method => :get do |f| %>
-    <%= text_field_tag :q %>
-    <%= submit_tag "Search" %>
+<% form_tag search_path, :method => :get do %>
+    <%= text_field_tag :q, params[:q] %>
+    <%= submit_tag "Search", :name => nil %>
 <% end %>
+
+
+<!-- <div nemesis='seanhess.containers.test' title='title one'>hello bob</div>
+<div nemesis='seanhess.containers.test' title='title two'>hello bob</div>
+<div nemesis='seanhess.containers.test' title='title three'>hello bob</div>
+<div nemesis='seanhess.containers.test' title='title four'>hello bob</div> -->

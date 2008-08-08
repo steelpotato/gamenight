@@ -22,7 +22,7 @@ module GamesHelper
   end
                                                 
   def player_options()
-    Player.find(:all).collect {|p| [p.name, p.id]}
+    Player.all.collect {|p| [p.name, p.id]}
   end
   
   def description(game)

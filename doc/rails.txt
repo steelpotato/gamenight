@@ -14,6 +14,9 @@ O - Login/Sessions
 O - Validations on Models
 √ - Players
 
+INTELLIGENT BACK
+O - use javascript to go back, but not to posting pages
+
 GAMES
 O - pagination
 
@@ -42,7 +45,9 @@ O - Add to Comments
 O - Add to Games
 
 BROWSING GAMES
-O - Make searching just like normal browsing (an extra parameter)
+√ - Make searching just like normal browsing (an extra parameter)
+√ - Change search engine
+O - Change search to use checkboxes and allow passing multiples
 O - Include some kind of title?
 O - "Browse by Category" button takes you to a page with all the categories?
 
@@ -60,13 +65,25 @@ O - Rss Feeds - autodetect
     UNDER-THE-HOOD
 ===========================
 
+DEPLOY
+O - use mod_rails
+http://www.rubyinside.com/28_mod_rails_and_passenger_resources-899.html
+http://nubyonrails.com/articles/ask-your-doctor-about-mod_rails - recommended settings for vps
+http://dysinger.net/2008/04/14/installing-apache-and-mod_rails-on-mac-os-x-leopard/
+http://jimneath.org/2008/05/10/using-capistrano-with-passenger-mod_rails/
+http://2tbsp.com/content/install_apache_2_and_php_5_macports - for local trash
+http://2tbsp.com/content/install_and_configure_mysql_5_macports - more local trash
+
 MODELS
 O - Validations
 O - Report on Validations
-
+`
 SPAM
 O - Build a human-checking question thing into every form
 O - Add it to all submit actions
+
+SESSIONS
+O - Session Timeout Plugin
 
 CACHING
 O - Finish caching chapter
@@ -75,5 +92,7 @@ O - Implement Action Caching
 O - Implement Fragment Caching
 O - Expire on time
 
-BENCHMARKING
+PERFORMANCE
 O - :include statements on associations? (N+1 Selects)
+O - check logs for bots and remove them from the session (p 531 of Rails Way)
+O - memchache (sessions + more)?

@@ -15,5 +15,8 @@ DOMAIN NAME
     gamestorm in stead of brainstorm
     gameshare.com
     gamenight.com 
+
+    gamenightsite.com
+    homegamenight
     
     

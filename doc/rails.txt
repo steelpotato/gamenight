@@ -74,6 +74,10 @@ http://jimneath.org/2008/05/10/using-capistrano-with-passenger-mod_rails/
 http://2tbsp.com/content/install_apache_2_and_php_5_macports - for local trash
 http://2tbsp.com/content/install_and_configure_mysql_5_macports - more local trash
 
+GOOGLE: Mod Rails Production (or deployment)
+GOOGLE: Rails git source control 
+GOOGLE: mod_rails capistrano
+
 MODELS
 O - Validations
 O - Report on Validations

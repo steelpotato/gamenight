@@ -4,7 +4,7 @@ development:
   adapter: mysql
   database: gamenight_dev2
   user: root
-  password: root
+  password: isaacisfat
   host: localhost  
 
 # Warning: The database defined as 'test' will be erased and
@@ -15,7 +15,7 @@ test:
     socket: /var/lib/mysql/mysql.sock
     database: gamenight_test
     user: root
-    password:
+    password: isaacisfat
     host: localhost
 
 production:
@@ -23,5 +23,5 @@ production:
     socket: /var/lib/mysql/mysql.sock
     database: gamenight
     user: root
-    password:
+    password: isaacisfat
     host: localhost

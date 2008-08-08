@@ -12,3 +12,5 @@ JRAILS
 SESSIONS
     rake db:sessions:create
     rake db:migrate
+    
+500 INTERNAL SERVER ERROR

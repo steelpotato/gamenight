@@ -19,7 +19,8 @@ test:
 
 production:
     adapter: mysql
-    database: gamenight_production
+    database: gamenight
     user: root
     password: root
     host: localhost
+    socket: /var/lib/mysql/mysql.sock

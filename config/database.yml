@@ -3,7 +3,7 @@
 development:
   adapter: mysql
   database: gamenight_dev2
-  user: root
+  username: root
   password: root
   host: localhost  
 
@@ -14,7 +14,7 @@ test:
     adapter: mysql
     socket: /var/lib/mysql/mysql.sock
     database: gamenight_test
-    user: root
+    username: root
     password: root
     host: localhost
 
@@ -22,6 +22,6 @@ production:
     adapter: mysql
     socket: /var/lib/mysql/mysql.sock
     database: gamenight
-    user: root
+    username: root
     password: root
     host: localhost

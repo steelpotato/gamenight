@@ -12,7 +12,7 @@ class Game < ActiveRecord::Base
     indexes comments.body, :as => :comment
       
     has min_players, max_players, created_at
-    has categorizations.category_id, :as => :catgory_id
+    has categories(:id), :as => :catgory_ids
   end
   
   # This just works!  That is so freaking cool I can't stand it
@@ -30,9 +30,10 @@ class Game < ActiveRecord::Base
       conditions[:min_players] = 1..params[:players].to_i
       conditions[:max_players] = params[:players].to_i..10
     end                 
-    
+     
+    Game.search params[:q], :with => { :category_ids => 1 } 
     # Game.search params[:q], :with => conditions
-    Game.search ''
+    # Game.search params[:q]
   end
   
 end

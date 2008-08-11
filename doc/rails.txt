@@ -19,6 +19,8 @@ O - use javascript to go back, but not to posting pages
 
 GAMES
 O - pagination
+O - edit saves multiple versions
+O - We have some way to restore old versions
 
 COMMENTS
 √ - Ajax Submit it!

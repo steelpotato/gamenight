@@ -1,15 +1,15 @@
 class Populate < ActiveRecord::Migration
   def self.up
-    Player.create :name => 1
-    Player.create :name => 2
-    Player.create :name => 3
-    Player.create :name => 4
-    Player.create :name => 5
-    Player.create :name => 6
-    Player.create :name => 7
-    Player.create :name => 8
-    Player.create :name => 9
-    Player.create :name => "Group"
+    Player.create :id => 1, :name => 1
+    Player.create :id => 2, :name => 2
+    Player.create :id => 3, :name => 3
+    Player.create :id => 4, :name => 4
+    Player.create :id => 5, :name => 5
+    Player.create :id => 6, :name => 6
+    Player.create :id => 7, :name => 7
+    Player.create :id => 8, :name => 8
+    Player.create :id => 9, :name => 9
+    Player.create :id => 10, :name => "Group"
     
     table = Category.create :name => 'Table'
     party = Category.create :name => 'Party'
@@ -25,5 +25,6 @@ class Populate < ActiveRecord::Migration
     Player.destroy_all
     Game.destroy_all
     Category.destroy_all
+    Categorization.destroy_all
   end
 end

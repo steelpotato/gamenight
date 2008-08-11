@@ -1,4 +1,5 @@
 class Category < ActiveRecord::Base
-  has_and_belongs_to_many :games
+  has_many :categorizations                     # You must use this before using the next line
+  has_many :games, :through => :categorizations # Map them games
   validates_presence_of :name
 end

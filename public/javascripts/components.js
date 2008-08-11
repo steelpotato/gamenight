@@ -19,5 +19,5 @@ $(function () {
 		return false;
 	})    
 
-	$(this).nemesis_init();
+	// $(this).nemesis_init();
 });

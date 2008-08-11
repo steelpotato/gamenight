@@ -19,4 +19,8 @@ DOMAIN NAME
     gamenightsite.com
     homegamenight
     
+    1) must have game
+    2) should connote doing something with games?
+    
+    
     

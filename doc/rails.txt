@@ -52,6 +52,7 @@ BROWSING GAMES
 O - Change search to use checkboxes and allow passing multiples
 O - Include some kind of title?
 O - "Browse by Category" button takes you to a page with all the categories?
+O - Some way to update index (deltas?)
 
 QUESTIONS
 Q - What happens when you click a category during browse?

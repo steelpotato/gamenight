@@ -3,6 +3,7 @@ class Game < ActiveRecord::Base
   has_many :comments                   
   has_many :categorizations
   has_many :categories, :through => :categorizations
+  has_many :game_versions
 
   validates_length_of :category_ids, :minimum => 1, :message => "must have at least 1 category"
   validates_length_of :title, :within => 1..50, :message => "must be present"
@@ -21,6 +22,12 @@ class Game < ActiveRecord::Base
   # This just works!  That is so freaking cool I can't stand it
   def to_param 
     id.to_s + "_" + title.gsub(/\s/, '_').gsub(/[^-\w]/,'').downcase
+  end
+  
+  alias_method :old_save, :save
+  def save
+    GameVersion.create :data => self.to_yaml, :game => self
+    old_save
   end
   
   def self.filter(params)  

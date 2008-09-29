@@ -4,16 +4,39 @@
 ===========================
 
 SPHINX
-    http://ts.freelancing-gods.com/usage.html
+    http://ts.freelancing-gods.com/usage.html  
+	-- install --
+	"ERROR: Cannot find MySQL include files" -- install mysql-devel "sudo port install mysql5-devel"
+	
+	install plugin (see url -- should already be done)
+	
+
+	-- commands --
+	rake ts:in (thinking_sphinx:index)
+	rake ts:start
+	rake ts:stop
+	rake ts:restart
         
 JRAILS
     /script/plugin install http://ennerchi.googlecode.com/svn/trunk/plugins/jrails
     
 SESSIONS
     rake db:sessions:create
-    rake db:migrate
-    
-500 INTERNAL SERVER ERROR ?? Not sure
+    rake db:migrate     
 
-Don't forget to install gem install mysql
+MIGRATIONS
+	rake db:create:all
+     
+FIXTURES (populate test data)     
+	rake db:fixtures:load
+
+OTHER
+Dont't forget to install gem install mysql
+
+===========================
+    COMMON ERRORS 
+===========================
+500 INTERNAL SERVER ERROR after mod_rails
+	check logs/*.log
+
 

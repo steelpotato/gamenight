@@ -1,3 +1,8 @@
+===========================
+	BOOTUP INSTRUCTIONS
+===========================                      
+rake ts:in
+rake ts:start
 
 ===========================
     SETUP INSTRUCTIONS 
@@ -5,10 +10,21 @@
 
 SPHINX
     http://ts.freelancing-gods.com/usage.html  
-	-- install --
-	"ERROR: Cannot find MySQL include files" -- install mysql-devel "sudo port install mysql5-devel"
+	-- install --          
+	see url
 	
-	install plugin (see url -- should already be done)
+	"ERROR: Cannot find MySQL include files" -- install mysql-devel "sudo port install mysql5-devel"
+		- actually, it was already installed, and I needed to do "cd /opt/local/bin & ln -s mysql_config5 mysql_config"
+		- or you can set --with-mysql=/opt/local/lib/mysql5
+		
+	Iconv errors: 
+		**  http://www.viget.com/extend/installing-sphinx-on-os-x-leopard/
+		*** http://blogwi.se/post/35063599/compiling-sphinx-on-leopard-with-macports-libraries
+		
+	Error: Socket
+		sudo ln -s /tmp/mysql.sock /opt/local/var/run/mysql5/mysqld.sock -- total hack!
+	
+	install plugin (see url -- should already be done)   
 	
 
 	-- commands --

@@ -3,7 +3,7 @@ class Game < ActiveRecord::Base
   has_many :comments                   
   has_many :categorizations
   has_many :categories, :through => :categorizations
-  has_many :game_versions
+  # has_many :game_versions
 
   validates_length_of :category_ids, :minimum => 1, :message => "must have at least 1 category"
   validates_length_of :title, :within => 1..50, :message => "must be present"
@@ -26,7 +26,7 @@ class Game < ActiveRecord::Base
   
   alias_method :old_save, :save
   def save
-    GameVersion.create :data => self.to_yaml, :game => self
+    # GameVersion.create :data => self.to_yaml, :game => self
     old_save
   end
   

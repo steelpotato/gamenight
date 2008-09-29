@@ -26,15 +26,16 @@ SESSIONS
 
 MIGRATIONS
 	rake db:create:all
+	rake db:migrate
      
-FIXTURES (populate test data)  
+FIXTURES
 	rake db:fixtures:load      
 	
-POPULATOR (haven't decided whether to use this or fixtures)
-	(populator and faker let you use random data and loops to populate with junk)
-	gem install populator
-	gem install faker
-	rake db:populate
+POPULATING TEST DATA
+   	run MIGRATIONS
+	
+	either run FIXTURES
+	or rake db:populate
 
 OTHER
 	Dont't forget to install gem install mysql

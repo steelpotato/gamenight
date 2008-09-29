@@ -1,33 +1,28 @@
 namespace :db do
   desc "Erase and fill database"
   task :populate => :environment do
-    require 'populator'
-    require 'faker'
     
-    [Category, Game, Players].each(&:delete_all) 
+    [Category, Game, Player, Categorization].each(&:delete_all) 
     
-    chess = Category.new ({:name => "Chess"}) 
+    Player.create :id => 1, :name => 1
+    Player.create :id => 2, :name => 2
+    Player.create :id => 3, :name => 3
+    Player.create :id => 4, :name => 4
+    Player.create :id => 5, :name => 5
+    Player.create :id => 6, :name => 6
+    Player.create :id => 7, :name => 7
+    Player.create :id => 8, :name => 8
+    Player.create :id => 9, :name => 9
+    Player.create :id => 10, :name => "Group"
     
-    Category.populate 20 do |category|
-      category.name = Populator.words(1..3).titleize
-      Product.populate 10..100 do |product|
-        product.category_id = category.id
-        product.name = Populator.words(1..5).titleize
-        product.description = Populator.sentences(2..10)
-        product.price = [4.99, 19.95, 100]
-        product.created_at = 2.years.ago..Time.now
-      end
-    end
+    table = Category.create :id => 1, :name => 'Table'
+    party = Category.create :id => 2, :name => 'Party'
+    active = Category.create :id => 3, :name => 'Active'
     
-    Person.populate 100 do |person|
-      person.name    = Faker::Name.name
-      person.company = Faker::Company.name
-      person.email   = Faker::Internet.email
-      person.phone   = Faker::PhoneNumber.phone_number
-      person.street  = Faker::Address.street_address
-      person.city    = Faker::Address.city
-      person.state   = Faker::Address.us_state_abbr
-      person.zip     = Faker::Address.zip_code
-    end
+    Game.create :title => 'Chess',      :min_players => 2, :max_players => 2, :description => "Chess is really old", :categories => [table] 
+    Game.create :title => 'Solitaire',  :min_players => 1, :max_players => 1, :description => "Solitaire is boring", :categories => [table]
+    Game.create :title => 'Uno',        :min_players => 2, :max_players => 10, :description => "Uno is fun", :categories => [table, party]
+    Game.create :title => 'Frisbee',    :min_players => 6, :max_players => 10, :description => "Frisbee is the best game ever", :categories => [active]
+    
   end
 end

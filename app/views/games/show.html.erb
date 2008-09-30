@@ -1,23 +1,47 @@
-<div>
-    <%= link_to "back", games_path() %> - 
-    <%= primary "Edit Game", edit_game_path(@game)  %>
-</div>
+<% content_for(:header) do %>
+	<div class="mainblock">
+		<h1><%= h(@game.title) %></h1> 
+		<div class="rating"><img src="/images/rate_static.png"></div>
+		
+		
+		<p><b>Description</b> </p>
+		<p>Players: <%= players(@game) %></p>
 
-<h1><%= h(@game.title) %></h1> 
-<p><b>Description</b> <%= description(@game) %></p>
-<p>Players: <%= players(@game) %></p>
+		<p>Categories: <%= render :partial => 'category', :collection => @game.categories %></p>
 
-<p>Categories: <%= render :partial => 'category', :collection => @game.categories %></p>
-
-<h3>Comments</h3>
-<div id='comments'><%= render :partial => 'comment', :collection => @game.comments %></div>
-
-<h4>Add a comment</h4>
-<div id='results'></div>
-<% remote_form_for [@game, @comment] do |f| %>
-  <%= f.error_messages %>
-  <%= f.text_area :body %>
-  <p><%= f.submit "Create" %></p>
+	</div>     
+	<div class="links">
+		<div><%= link_to "<< back to results", root_path() %></div>
+		<div><%= link_to "edit game", edit_game_path(@game) %></div>
+	</div>
 <% end %>
+
+
+<div class="section">
+	<h2>description</h2>
+	<div class="content">
+		<%= description(@game) %>
+	</div>
+</div>                           
+                                 
+<div class="section">
+	<h2>comments</h2>
+	<div class="content">
+		<%= render :partial => 'comment', :collection => @game.comments %>
+	</div> 
+	<div class="content">
+		<h4>Add a comment</h4>
+		<div class="comment_form"></div>
+		<% remote_form_for [@game, @comment] do |f| %>
+		  <%= f.error_messages %>
+		  <%= f.text_area :body %>
+		  <p><%= f.submit "Create" %></p>
+		<% end %>
+	</div>  
+	
+	
+	
+</div>
+    
 
 

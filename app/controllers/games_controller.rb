@@ -1,5 +1,5 @@
 class GamesController < ApplicationController
-  layout 'columns'
+  layout 'standard'
   # GET /games
   # GET /games.xml
   

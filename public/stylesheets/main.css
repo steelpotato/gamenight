@@ -1,7 +1,78 @@
 body, html { margin:0; padding:0; }
-div#banner { background-color:black; height:120px;; padding-left:40px; padding-top:60px;}
-div#content { width:800px; margin: 20px auto;}
-a img { border:0; }
 
-div#left { float:left; width:200px; }
-div#main { float:left; }
+.body { background-color: #FCFCFC }
+
+div#content { width:800px; margin: 20px auto;}  
+
+a img { border:0; }
+a 	  { font-weight:bold; color: #990000; }
+a:hover { background-color:none; }
+                                          
+.comment_form textarea { height: 200px; width:50px; }
+
+
+/*====================	
+		BANNER
+======================*/
+div#banner { height:134px; background-color: black; }     
+div#logo	{ position:relative; top: 40px; left:-20px; }
+
+div#banner .content { width: 900px; margin: 0 auto; }
+
+/*====================	
+		HEADER
+======================*/                                                
+                      
+#header 				{ background-image:url("../images/background.png"); border-bottom: solid 1px #FFE8CD; }
+#header div.content		{ width: 900px; margin: 0px auto; padding:20px; }
+#header div.text		{ font-size: 16px; } 
+#header div.mainblock	{ width: 370px; text-align:center; padding: 20 0 20 0;}
+#header div.secondblock	{ float:right; width: 460px; text-align:center;}     
+
+#header div.search.big 				{ position: relative; top:70px;}
+#header div.search.big input.field  { font-size: 24px; position:relative; top:6px; }
+#header div.search.big input.button { width:130px; height:31px; margin-left:10px; background: url("../images/search.png"); border:none; color:white; font-weight:bold; }
+
+#header div.links		{ float:right; position:relative; top:10px;  }
+#header div.links div	{ float:left; margin-left:20px;  }
+#header div.links div a 		{ padding:5px; padding-left:20px; padding-right:20px; background-color:white; border:solid 1px #990000; text-decoration:none; font-family:"Helvetica Neue", Verdana, Arial; font-size: 14px;}
+#header div.links div a:hover 	{ background-color:#990000; border:solid 1px #990000; color:white; }
+
+/*====================	
+		CONTENT
+======================*/
+#content div.section 	{ clear:both; margin-top:100px;}
+#content div.section h1, #content div.section h2, #content div.section h3, #content div.section h4 
+						{ width:300px; float:left; text-align:right; position:relative; top:-10px; }
+						
+#content div.section div.content { width: 450px; float:right; margin-bottom: 60px; line-height:1.8em;}
+
+#content div.content h4 { float:none; text-align:left; }    
+
+
+
+/*====================	
+		COPYRIGHT
+======================*/
+.copyright				{ clear:both; padding:10px; background-color: #F2F2F2; border: solid 1px #CCCCCC; }
+.copyright div			{ font-size:10px; width:280px; margin: 0 auto; text-align:center;}
+
+/*====================	
+		TYPE
+======================*/
+div, p, span, body, input { font-family:Verdana, Arial; font-size:12px; line-height:1.5em;}
+h1, h2, h3, h4, h5 { font-family:"Helvetica Neue", Verdana, Arial; }
+h1 { font-size: 36px; }
+h2 { font-size: 24px; }
+h3 { font-size: 18px; }
+h4 { font-size: 14px; }
+
+/*#banner div.links {
+	color:#CCCCCC;
+	font-weight:bold;
+	float: right;
+	border:solid 1px red;
+	position: relative;
+	top: 40px;
+	right: 45px;
+}*/

@@ -1,10 +1,40 @@
-<%= link_to "Browse Games" , games_path() %>
-<% form_tag search_path, :method => :get do %>
-    <%= text_field_tag :q, params[:q] %>
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
+<% content_for(:header) do %>   
+	<div class="secondblock">
+		<div class="search big">
+			<% form_tag search_path, :method => :get do %>
+			    <%= text_field_tag :q, params[:q], :class => "field" %>
+			    <%= submit_tag "Search", :name => nil, :class => "button" %>
+			<% end %>          
+		</div>
+	</div>
+	<div class="mainblock">
+		<h1>find and share games</h1>
+		<div class="text">Everybody knows some really great games. Find some by searching on the right, or clicking below.</b></div>
+		<h2><%= link_to "browse games" , games_path() %></h2>
+	</div>  
+	<div class="links">      
+		<div><%= link_to "post a game", new_game_path() %></div>
+		<div><%= link_to "signup for free", login_path() %></div>
+	</div>
+<% end %>         
+
+<div class="section">
+	<h2>what is gamenight?</h2>
+	<div class="content">Gamenight is a home for game rules. It is a place where people dump the zany ideas and variations they have for a million party, dice, card, and ball games. </div>
+</div>        
+
+<div class="section">
+	<h2>what can I do?</h2>
+	<div class="content">Use this site to find new games by browsing or searching. You can filter the games by the number of players, the age groups, or the categories they belong to.</div>
+</div>
+
+<div class="section">
+	<h2>are the games free?</h2>
+	<div class="content">You can find commercial games at the store. These games are meant to be played with common game pieces you might already have: a deck of cards, some dice, paper, maybe a few tokens. Occasionally you may find some rules for a variation on a popular commercial game</div>
+</div>
 
 
+               
 <!-- <div nemesis='seanhess.containers.test' title='title one'>hello bob</div>
 <div nemesis='seanhess.containers.test' title='title two'>hello bob</div>
 <div nemesis='seanhess.containers.test' title='title three'>hello bob</div>

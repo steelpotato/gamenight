@@ -1,5 +1,10 @@
-<div id='banner'>
-    <% link_to root_path() do %>
-        <%= image_tag "logo.gif"%>
-    <% end %>
+<div id='banner'>  
+	<div class="content">        
+	<div id="logo">
+    	<% link_to root_path() do %>
+        	<%= image_tag "logo.gif"%>
+    	<% end %>
+	</div>           
+	<%= yield :banner %>
+	</div>
 </div>

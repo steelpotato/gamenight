@@ -1,9 +1,17 @@
-<% content_for(:header) do %>
-    <%= link_to "Post a new game", new_game_path() %>
-    <%= render :partial => 'filter' %>
+<% content_for(:header) do %>     
+	<div class="secondblock">
+    	<%= render :partial => 'filter' %>
+	</div>  
+	<div class="mainblock">
+		<h1>Games</h1>   
+		<div class="text">Can't find what you're looking for? Try changing the filter on the right</div>
+	</div>
+	<div class="secondarylinks">
+		<div><%= link_to "browse games", games_path() %></div>
+		<div><%= link_to "post a game", new_game_path() %></div>
+	</div>
 <% end %>
 
-<h1>Games</h1>
 <%= render :partial => 'game', :collection => @games %>
 
             

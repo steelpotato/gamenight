@@ -21,7 +21,7 @@ class Game < ActiveRecord::Base
   
   # This just works!  That is so freaking cool I can't stand it
   def to_param 
-    id.to_s + "_" + title.gsub(/\s/, '_').gsub(/[^-\w]/,'').downcase
+    id.to_s + "_" + title.gsub(/\s/, '_').gsub(/[^-\w]/,'').downcase      
   end
   
   alias_method :old_save, :save

@@ -26,7 +26,8 @@ div#banner .content { width: 900px; margin: 0 auto; }
 #header 				{ background-image:url("../images/background.png"); border-bottom: solid 1px #FFE8CD; }
 #header div.content		{ width: 900px; margin: 0px auto; padding:20px; }
 #header div.text		{ font-size: 16px; } 
-#header div.mainblock	{ width: 370px; text-align:center; padding: 20 0 20 0;}
+#header div.mainblock	{ width: 370px; padding: 20 0 20 0;} 
+#header .centered		{ text-align:center; }
 #header div.secondblock	{ float:right; width: 460px; text-align:center;}     
 
 #header div.search.big 				{ position: relative; top:70px;}
@@ -37,6 +38,11 @@ div#banner .content { width: 900px; margin: 0 auto; }
 #header div.links div	{ float:left; margin-left:20px;  }
 #header div.links div a 		{ padding:5px; padding-left:20px; padding-right:20px; background-color:white; border:solid 1px #990000; text-decoration:none; font-family:"Helvetica Neue", Verdana, Arial; font-size: 14px;}
 #header div.links div a:hover 	{ background-color:#990000; border:solid 1px #990000; color:white; }
+
+#header div.secondarylinks    	{ padding-top:20px; padding-bottom:10px; }
+#header div.secondarylinks a   	{ font-size: 18px; }
+#header div.secondarylinks div  { float:left; margin-right: 20px;  }
+
 
 /*====================	
 		CONTENT
